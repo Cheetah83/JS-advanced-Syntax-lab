@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Math Operator</h1>
+  <form action="">
+    <input type="text" name="num1" value="number" />
+    <input type="text" name="sign" value="Operator" />
+    <input type="text" name="num2" value="number" />
+    <input type="button" value="result" onclick="solve()" />
+  </form>
+  <script>
+    function solve() {
+      let result;
+      num1 = document.getElementsByName('num1')[0].value;
+      num2 = document.getElementsByName('num2')[0].value;
+      operator = document.getElementsByName('operator')[0].value;
+      switch(operator) {
+        case '+': result = num1 + num2; break;
+        case '-': result = num1 - num2; break;
+        case '*': result = num1 * num2; break;
+        case '/': result = num1 / num2; break;
+        case '%': result = num1 % num2; break;
+        case '**': result = num1 ** num2; break;
+      }
+      
+      document.body.innerHTML += `<div>${result}</div>`;
+    }
+  </script>
+</body>
+</html>
